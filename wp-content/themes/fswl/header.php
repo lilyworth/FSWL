@@ -14,7 +14,5 @@
 <body>
 <div class="main">
     <header>
-        <div class="logo">
             <a href="<?php home_url(); ?>">From Syria with Love</a>
-        </div>
     </header>
