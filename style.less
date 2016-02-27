@@ -1,0 +1,112 @@
+/*Theme Name: From Syria with Love
+Theme URI: 
+Author: Lily Worth
+Author URI: http://lilyworth.co.uk
+Description: Bespoke theme for From Syria with Love
+Version: 1.1
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Calligraffitti);
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+@import url(https://fonts.googleapis.com/css?family=Satisfy);
+
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import "reset.less";
+
+//colours
+@white: #fff; 
+@red: #ef476f;
+@yellow: #ffd166;
+@green: #06d6a0;
+@blue: #118ab2;
+@navy: #073b4c;
+@black: #111;
+@grey: #555;
+
+@mainfont: 1em;
+@mainlh: 1em;
+@mainmarg: 2em;
+@mainpad: 2em;
+
+//widths
+.fullwidth {width:100%;}
+.mainwidth {width:1200px;}
+
+//alignment & positioning
+.center {margin:0 auto;}
+.left {float:left;}
+.right {float:right;}
+.relative {position:relative;}
+.absolute {position:absolute;}
+.static {position:static;}
+.fixed {position:fixed;}
+.block {display:block;}
+.inline {display:inline;}
+
+.nopad {padding:0;}
+.nomarg {margin:0;}
+.none {display:none;}
+.hidden {overflow:hidden;}
+
+.bnone {border:none;}
+
+.txtc {text-align:center;}
+.txtl {text-align:left;}
+.txtr {text-align:right;}
+.strong {font-weight:bold;}
+
+//grid
+.row {.hidden; .fullwidth;}
+.grid12, .grid11, .grid10, .grid9, .grid8, .grid7, .grid6, .grid5, .grid4, .grid3, .grid2, .grid1 {margin: 0 2%; .nopad; .left; .relative;}
+.grid12 {width:96%;}
+.grid11 {width:87.66%;}
+.grid10 {width:79.33%;}
+.grid9 {width:71%;}
+.grid8 {width:62.66%;}
+.grid7 {width: 54.33%;}
+.grid6 {width: 46%;}
+.grid5 {width: 37.66%;}
+.grid4 {width: 29.33%;}
+.grid3 {width: 21%;}
+.grid2 {width: 12.66%;}
+.grid1 {width: 4.33%;}
+
+.push12 {margin-left: 100%;}
+.push11 {margin-left: 93.66%;}
+.push10 {margin-left: 85.33%;}
+.push9 {margin-left: 77%;}
+.push8 {margin-left: 68.66%;}
+.push7 {margin-left: 60.33%;}
+.push6 {margin-left: 52%;}
+.push5 {margin-left: 43.66%;}
+.push4 {margin-left: 35.33%;}
+.push3 {margin-left: 27%;}
+.push2 {margin-left: 18.66%;}
+.push1 {margin-left: 10.33%;}
+
+//mostly temp
+* {-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+html {.nomarg; .fullwidth;}
+body {font: 0.625em Arial, sans-serif; height:100%;}
+h1, h2, h3, h4 {font-family: 'PT Sans', sans-serif; font-weight:normal; padding-bottom: @mainpad + 0.4;}
+h1 {font-size:@mainfont + 1.4;}
+h2 {font-size:@mainfont + 1.2;}
+h3 {font-size:@mainfont + 1;}
+h4 {font-size:@mainfont + 0.8;}
+p {font-size:@mainfont + 0.6; line-height:@mainlh + 0.6; padding-bottom: @mainpad + 0.6; font-family:Arial, sans-serif; font-weight:normal;}
+img {.fullwidth; height:auto;}
+
+#logo {.block; border:none; font-family: 'pacifico', arial, sans-serif; color:@black; font-size:@mainfont + 2;}
+#logo a {color:@black; text-decoration:none;}
+.button {display: inline-block; border: 0;}
+
+.pagewrapper {.hidden; .relative; top: -38px;}
+.main {.relative;}
+
+@media only screen and (max-width: 767px) {
+    .grid11, .grid10, .grid9, .grid8, .grid7, .grid6, .grid5, .grid4, .grid3, .grid2, .grid1 {width:96%; margin:0;}
+    .mob_hide {display:none;}
+    .mob_show {display:block;}
+}
+
+
