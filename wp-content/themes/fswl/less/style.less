@@ -11,7 +11,6 @@ Version: 1.1
 @import url(https://fonts.googleapis.com/css?family=Satisfy);
 
 @import url(https://fonts.googleapis.com/css?family=Lato);
-@import "reset.less";
 
 //colours
 @white: #fff; 
@@ -30,7 +29,7 @@ Version: 1.1
 
 //widths
 .fullwidth {width:100%;}
-.mainwidth {width:1200px;}
+.mainwidth {max-width:1200px;}
 
 //alignment & positioning
 .center {margin:0 auto;}
@@ -86,24 +85,37 @@ Version: 1.1
 
 //mostly temp
 * {-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
-html {.nomarg; .fullwidth;}
+html, body {margin:0 !important;}
+html {.fullwidth;}
 body {font: 0.625em Arial, sans-serif; height:100%;}
-h1, h2, h3, h4 {font-family: 'PT Sans', sans-serif; font-weight:normal; padding-bottom: @mainpad + 0.4;}
-h1 {font-size:@mainfont + 1.4;}
-h2 {font-size:@mainfont + 1.2;}
-h3 {font-size:@mainfont + 1;}
-h4 {font-size:@mainfont + 0.8;}
-p {font-size:@mainfont + 0.6; line-height:@mainlh + 0.6; padding-bottom: @mainpad + 0.6; font-family:Arial, sans-serif; font-weight:normal;}
+h1, h2, h3, h4 {font-family: 'Lato', sans-serif; font-weight:normal;}
+h1 {font-size:@mainfont + 2.5;}
+h2 {font-size:@mainfont + 2;}
+h3 {font-size:@mainfont + 1.5;}
+h4 {font-size:@mainfont + 1;}
+p {font-size:@mainfont + 0.6; line-height:@mainlh + 0.6; padding-bottom: @mainpad; font-family:Arial, sans-serif; font-weight:normal;}
 img {.fullwidth; height:auto;}
-
-header a {.block; border:none; font-family: 'pacifico', arial, sans-serif; color:@black; font-size:@mainfont + 2; color:@black; text-decoration:none;}
 .button {display: inline-block; border: 0;}
 
-.pagewrapper {.hidden; .relative; top: -38px;}
-.main {.relative;}
+.pagewrapper {.hidden; .relative;}
+.main {.relative; .mainwidth; padding:0 20px; .center;}
+
+header {.main; padding:@mainpad; .hidden;}
+#logo {.grid5;}
+#logo a {border:none; font-family: 'Satisfy', arial, sans-serif; color:@black; font-size:@mainfont + 2.2; color:@black; text-decoration:none; .relative; left:0;}
+nav {.grid7; .relative; top:10px;}
+nav ul {width:auto; float:right; display:inline; .nomarg; .nopad;}
+nav ul li {list-style:none; display:inline-block; padding-left:@mainpad + 2;}
+nav ul li a {color:@blue; font-size:@mainfont + 1; text-decoration:none;}
+nav ul li a:hover {color:@navy;}
+nav ul li ul li {display:none;}
+
+.intro {.main; text-align:center; margin-top:@mainmarg + 2;}
+.hero {background:url(img/syria-hero.jpg) no-repeat center; background-size:cover; height:300px;}
+#upcoming {background:@green; .grid8; .push2; padding:@mainpad; color:@white; margin-bottom: @mainmarg}
 
 @media only screen and (max-width: 767px) {
-    .grid11, .grid10, .grid9, .grid8, .grid7, .grid6, .grid5, .grid4, .grid3, .grid2, .grid1 {width:96%; margin:0;}
+    .grid11, .grid10, .grid9, .grid8, .grid7, .grid6, .grid5, .grid4, .grid3, .grid2, .grid1, header, nav, #logo {width:96%; margin:0;}
     .mob_hide {display:none;}
     .mob_show {display:block;}
 }

@@ -12,7 +12,10 @@
 <?php wp_head(); ?> 
 </head>
 <body>
-<div class="main">
+<div class="pagewrapper">
     <header>
-            <a href="<?php home_url(); ?>">From Syria with Love</a>
+        <div id="logo"><a href="<?php home_url(); ?>">From Syria with Love</a></div>
+        <nav>
+            <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
+        </nav>
     </header>
